@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./public/image.jpg" />
+    <title>HTML Basic</title>
+    <style>
+    .all-browsers {
+    margin: 0;
+    padding: 5px;
+    background-color: lightgray;
+    }
+
+    .all-browsers > h1, .browser {
+    margin: 10px;
+    padding: 5px;
+    }
+
+    .browser {
+    background: white;
+    }
+
+    .browser > h2, p {
+    margin: 4px;
+    font-size: 90%;
+    }
+    * {
+    box-sizing: border-box;
+    }
+
+    body {
+    font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* Style the header */
+    header {
+    background-color: #666;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    }
+
+    /* Create two columns/boxes that floats next to each other */
+    nav {
+    float: left;
+    width: 30%;
+    height: 300px; /* only for demonstration, should be removed */
+    background: #ccc;
+    padding: 20px;
+    }
+
+    /* Style the list inside the menu */
+    nav ul {
+    list-style-type: none;
+    padding: 0;
+    }
+
+    article {
+    float: left;
+    padding: 20px;
+    width: 70%;
+    background-color: #f1f1f1;
+    height: 300px; /* only for demonstration, should be removed */
+    }
+
+    /* Clear floats after the columns */
+    section::after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+
+    /* Style the footer */
+    footer {
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    }
+
+    /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+    @media (max-width: 600px) {
+    nav, article {
+        width: 100%;
+        height: auto;
+    }
+    }
+        /* table */
+      table,
+      th,
+      td {
+        border: 1px solid slategray;
+      }
+      /* tr:nth-child(even) {
+        background-color: #D6EEEE;
+        } */
+      tr:hover {
+        background-color: #d6eeee;
+      }
+
+      /* navigation menu */
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333333;
+      }
+      liMenu {
+        float: left;
+      }
+
+      liMenu a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 16px;
+        text-decoration: none;
+      }
+
+      liMenu a:hover {
+        background-color: #111111;
+      }
+      .city {
+        background-color: slateblue;
+        color: white;
+        border: 2px solid black;
+        margin: 20px;
+        padding: 20px;
+        }
+        #myHeader {
+        background-color: lightblue;
+        color: black;
+        padding: 40px;
+        text-align: center;
+        } 
+    </style>
+  </head>
+  <body style="background-color: rgb(240, 240, 240)">
+    <a href="#target">Jump to Target</a>
+    <hr />
+    <h1>HTML Basic</h1>
+    <h2>Heading H2</h2>
+    <br />
+    <p>Paragraph</p>
+    <br />
+    <a href="#">Link</a> <br />
+    <img src="./public/image.jpg" alt="image" width="100" height="100" />
+    <p title="I'm a tooltip">Paragraph with title</p>
+
+    <hr />
+    <h1>Formating Element</h1>
+    <b> - Bold text </b> <br />
+    <strong> - Important text </strong> <br />
+    <i> - Italic text </i> <br />
+    <em> - Emphasized text </em> <br />
+    <mark> - Marked text </mark> <br />
+    <small> - Smaller text </small> <br />
+    <del> - Deleted text </del> <br />
+    <ins> - Inserted text </ins> <br />
+    <sub> - Subscript text </sub> <br />
+    <sup> - Superscript text </sup> <br />
+
+    <blockquote>
+      This is blockquote <br />
+      isi blockquote. This is blockquote.
+    </blockquote>
+
+    <p>Petik dua : <q>Isi petik dua</q></p>
+
+    <address>
+      This is Address<br />
+      Visit us at:<br />
+      Mars<br />
+    </address>
+    <br />
+    <bdo>This is bdo</bdo>
+    <bdo dir="rtl">This is bdo</bdo>
+
+    <h1 style="background-color: Grey">HTML Colors</h1>
+    <p style="background-color: slateblue">
+      This is Paragraph <br />
+      This is Paragraph <br />
+      This is Paragraph <br />
+      This is Paragraph <br />
+    </p>
+    <h1 style="color: Tomato">H1 Colors</h1>
+    <p style="color: DodgerBlue">This is P colors</p>
+    <p style="color: MediumSeaGreen">This is P colors</p>
+
+    <h1 style="border: 2px solid Tomato">H1 Border colors</h1>
+    <h1 style="border: 2px solid DodgerBlue">H1 Border colors</h1>
+
+    <h1 style="background-color: #ff6347">
+      This is Hex background color #ff6347
+    </h1>
+
+    <hr />
+    <h1>This is transparant background color</h1>
+    <hr />
+    <h1 style="background-color: rgba(255, 99, 71, 0)">rgba(255, 99, 71, 0)</h1>
+    <h1 style="background-color: rgba(255, 99, 71, 0.2)">
+      rgba(255, 99, 71, 0.2)
+    </h1>
+    <h1 style="background-color: rgba(255, 99, 71, 0.4)">
+      rgba(255, 99, 71, 0.4)
+    </h1>
+    <h1 style="background-color: rgba(255, 99, 71, 0.6)">
+      rgba(255, 99, 71, 0.6)
+    </h1>
+    <h1 style="background-color: rgba(255, 99, 71, 0.8)">
+      rgba(255, 99, 71, 0.8)
+    </h1>
+    <h1 style="background-color: rgba(255, 99, 71, 1)">rgba(255, 99, 71, 1)</h1>
+
+    <hr />
+    <a href="#" target="_self">Target _self</a><br />
+    <a href="#" target="_blank">Target _blank</a><br />
+    <a href="#" target="_parent">Target _parent</a><br />
+    <a href="#" target="_top">Target _top</a><br />
+
+    <p><a href="mailto:ardiyan.ds@gmail.com">Send email Ardiyan.ds</a></p>
+
+    <hr />
+    <h2 id="target">Target Jump</h2>
+    <hr />
+    <p>Rounded Image</p>
+    <img
+      src="./public/image.jpg"
+      alt="image"
+      style="border-radius: 50%"
+      width="100"
+      height="100"
+    />
+
+    <p>This is div with Background image</p>
+    <div
+      style="
+        background-image: url('./public/image.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+      "
+    >
+      <br /><br /><br /><br /><br /><br /><br /><br /><br />
+    </div>
+    <hr />
+    <p>
+      Favicon in Head of HTML link rel="icon" type="image/x-icon"
+      href="./public/image.jpg"
+    </p>
+    <hr />
+    <table style="width: 50%">
+      <tr>
+        <th>Company</th>
+        <th>Contact</th>
+        <th>Country</th>
+      </tr>
+      <tr>
+        <td>Alfreds Futterkiste</td>
+        <td>Maria Anders</td>
+        <td>Germany</td>
+      </tr>
+      <tr>
+        <td>Centro comercial Moctezuma</td>
+        <td>Francisco Chang</td>
+        <td>Mexico</td>
+      </tr>
+    </table>
+    <h2>Table Border</h2>
+    <p>
+      dotted <br />
+      dashed <br />
+      solid <br />
+      double <br />
+      groove <br />
+      ridge <br />
+      inset <br />
+      outset <br />
+      none <br />
+      hidden<br />
+    </p>
+    <h2>Width Height Table</h2>
+    <table style="width: 50%">
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Age</th>
+      </tr>
+      <tr style="height: 200px; width: 200px">
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>50</td>
+      </tr>
+      <tr>
+        <td>Eve</td>
+        <td>Jackson</td>
+        <td>94</td>
+      </tr>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>80</td>
+      </tr>
+    </table>
+    <h2>Table Vertical</h2>
+    <table style="width: 50%">
+      <tr>
+        <th>Firstname</th>
+        <td>Jill</td>
+        <td>Eve</td>
+      </tr>
+      <tr>
+        <th>Lastname</th>
+        <td>Smith</td>
+        <td>Jackson</td>
+      </tr>
+      <tr>
+        <th>Age</th>
+        <td>50</td>
+        <td>94</td>
+      </tr>
+    </table>
+    <table style="width: 50%">
+      <br />
+      <caption>
+        Table Caption and Colspan
+      </caption>
+      <tr>
+        <th colspan="2">Name</th>
+        <th>Age</th>
+      </tr>
+      <tr>
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>50</td>
+      </tr>
+      <tr>
+        <td>Eve</td>
+        <td>Jackson</td>
+        <td>94</td>
+      </tr>
+    </table>
+    <table style="width: 50%">
+      <br />
+      <caption>
+        Table Caption and Rowspan
+      </caption>
+      <tr>
+        <th>Name</th>
+        <td>Jill</td>
+      </tr>
+      <tr>
+        <th rowspan="2">Phone</th>
+        <td>555-1234</td>
+      </tr>
+      <tr>
+        <td>555-8745</td>
+      </tr>
+    </table>
+    <br />
+    <table style="width: 50%">
+      <caption>
+        Table Colgroup
+      </caption>
+      <colgroup>
+        <col span="2" style="background-color: #d6eeee" />
+      </colgroup>
+      <tr>
+        <th>MON</th>
+        <th>TUE</th>
+        <th>WED</th>
+        <th>THU</th>
+        <th>FRI</th>
+        <th>SAT</th>
+        <th>SUN</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>9</td>
+        <td>10</td>
+        <td>11</td>
+        <td>12</td>
+        <td>13</td>
+        <td>14</td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td>16</td>
+        <td>17</td>
+        <td>18</td>
+        <td>19</td>
+        <td>20</td>
+        <td>21</td>
+      </tr>
+      <tr>
+        <td>22</td>
+        <td>23</td>
+        <td>24</td>
+        <td>25</td>
+        <td>26</td>
+        <td>27</td>
+        <td>28</td>
+      </tr>
+    </table>
+    <br />
+    <table style="width: 50%">
+      <colgroup>
+        <col span="3" />
+        <col span="2" style="background-color: pink" />
+      </colgroup>
+      <tr>
+        <th>MON</th>
+        <th>TUE</th>
+        <th>WED</th>
+        <th>THU</th>
+        <th>FRI</th>
+        <th>SAT</th>
+        <th>SUN</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>9</td>
+        <td>10</td>
+        <td>11</td>
+        <td>12</td>
+        <td>13</td>
+        <td>14</td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td>16</td>
+        <td>17</td>
+        <td>18</td>
+        <td>19</td>
+        <td>20</td>
+        <td>21</td>
+      </tr>
+      <tr>
+        <td>22</td>
+        <td>23</td>
+        <td>24</td>
+        <td>25</td>
+        <td>26</td>
+        <td>27</td>
+        <td>28</td>
+      </tr>
+    </table>
+    <hr />
+    <h2>An Unodered HTML List</h2>
+    <ul>
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ul>
+
+    <h2>An Ordered HTML List</h2>
+
+    <ol>
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ol>
+
+    <h2>A Description List</h2>
+
+    <dl>
+      <dt>Coffee</dt>
+      <dd>- black hot drink</dd>
+      <dt>Milk</dt>
+      <dd>- white cold drink</dd>
+    </dl>
+
+    <h2>Navigation Menu</h2>
+
+    <ul>
+      <liMenu><a href="#home">Home</a></liMenu>
+      <liMenu><a href="#news">News</a></liMenu>
+      <liMenu><a href="#contact">Contact</a></liMenu>
+      <liMenu><a href="#about">About</a></liMenu>
+    </ul>
+    <br>
+    <ol>
+        <p>Ordered List</p>
+        <li>Coffee</li>
+        <li>Tea
+          <ol>
+            <li>Black tea</li>
+            <li>Green tea</li>
+          </ol>
+        </li>
+        <li>Milk</li>
+      </ol>
+      <hr>
+      <a>This is a</a><br>
+      <abbr>This is abbr</abbr><br>
+      <b>This is b</b><br>
+      <bdo>This is bdo</bdo><br>
+      <button>This is button</button><br>
+      <cite>This is cite</cite><br>
+      <code>This is code</code><br>
+      <dfn>This is dfn</dfn><br>
+      <em>This is em</em><br>
+      <i>This is i</i><br>
+      <input placeholder="This is input"></input><br>
+      <kbd>This is kbd</kbd><br>
+      <label>This is label</label><br>
+      <map>This is map</map><br>
+      <object>This is object</object><br>
+      <output>This is output</output><br>
+      <q>This is q</q><br>
+      <samp>This is samp</samp><br>
+      <small>This is small</small><br>
+      <span>This is span</span><br>
+      <strong>This is strong</strong><br>
+      <sub>This is sub</sub><br>
+      <sup>This is sup</sup><br>
+      <textarea>This is textarea</textarea><br>
+      <time>This is time</time><br>
+      <var>This is var</var><br>
+      <hr>
+      <div class="city">
+        <h2>London</h2>
+        <p>London is the capital of England.</p>
+        </div> 
+        
+        <div class="city">
+        <h2>Paris</h2>
+        <p>Paris is the capital of France.</p>
+        </div>
+        
+        <div class="city">
+        <h2>Tokyo</h2>
+        <p>Tokyo is the capital of Japan.</p>
+        </div>
+        <hr>
+
+        <button onclick="hide()">Hide elements</button>
+
+
+        <h2 class="city">London</h2>
+        <p>London is the capital of England.</p>
+
+        <h2 class="city">Paris</h2>
+        <p>Paris is the capital of France.</p>
+
+        <h2 class="city">Tokyo</h2>
+        <p>Tokyo is the capital of Japan.</p>
+        <hr>
+        <h1 id="myHeader">Header with style CSS</h1>
+        <button onclick="displayResult()">Change text</button>
+        <hr>
+        <p>Iframe Google.com</p>
+        <iframe src="https://www.google.com/search?igu=1" style="height:550px;width: 500px;" title="google"></iframe>
+        <hr>
+        <p id="date"></p>
+        <button type="button"
+        onclick="document.getElementById('date').innerHTML = Date()">
+        Display Date and Time.</button>
+        <hr>
+
+        <header>
+            <h2>Cities</h2>
+          </header>
+          
+          <section>
+            <nav>
+              <ul>
+                <li><a href="#">London</a></li>
+                <li><a href="#">Paris</a></li>
+                <li><a href="#">Tokyo</a></li>
+              </ul>
+            </nav>
+            
+            <article>
+              <h1>London</h1>
+              <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+              <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+            </article>
+          </section>
+          
+          <footer>
+            <p>Footer</p>
+          </footer>
+          <hr>
+
+          <code>
+              This is code
+            x = 5;
+            y = 6;
+            z = x + y;
+            </code>
+
+            <pre>
+                <code>
+                    This is code with pre
+                  x = 5;
+                  y = 6;
+                  z = x + y;
+                  </code>              
+            </pre>
+    <hr>
+    <section>
+        <h1>This is sematic</h1>
+        <h1>WWF</h1>
+        <p>The World Wide Fund for Nature (WWF) is an international organization working on issues regarding the conservation, research and restoration of the environment, formerly named the World Wildlife Fund. WWF was founded in 1961.</p>
+      </section>
+      
+      <section>
+        <h1>WWF's Panda symbol</h1>
+        <p>The Panda has become the symbol of WWF. The well-known panda logo of WWF originated from a panda named Chi Chi that was transferred from the Beijing Zoo to the London Zoo in the same year of the establishment of WWF.</p>
+      </section>
+
+
+      <p>
+          Tag	Description
+          <br>       article>	Defines independent, self-contained content
+          <br>       aside>	Defines content aside from the page content
+          <br>       details>	Defines additional details that the user can view or hide
+          <br>       figcaption>	Defines a caption for a figure> element
+          <br>       figure>	Specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.
+          <br>       footer>	Defines a footer for a document or section
+          <br>       header>	Specifies a header for a document or section
+          <br>       main>	Specifies the main content of a document
+          <br>       mark>	Defines marked/highlighted text
+          <br>       nav>	Defines navigation links
+          <br>       section>	Defines a section in a document
+          <br>       summary>	Defines a visible heading for a details> element
+          <br>       time>	Defines a date/time
+        </p>
+          <hr>
+          <h1>Some Useful HTML Character Entities</h1>
+          <p>
+          <br>Result	Description	Entity Name	Entity Number	Try it
+          <br>non-breaking space	&nbsp;	&#160;	
+          <br><	less than	&lt;	&#60;	
+          <br>>	greater than	&gt;	&#62;	
+          <br>&	ampersand	&amp;	&#38;	
+          <br>"	double quotation mark	&quot;	&#34;	
+          <br>'	single quotation mark (apostrophe)	&apos;	&#39;	
+          <br>¢	cent	&cent;	&#162;	
+          <br>£	pound	&pound;	&#163;	
+          <br>¥	yen	&yen;	&#165;	
+          <br>€	euro	&euro;	&#8364;	
+          <br>©	copyright	&copy;	&#169;	
+          <br>®	registered trademark	&reg;	&#174;
+        </p>
+        <p>
+            Emoji	Value	
+            <br>
+            🗻	&#128507;	
+            🗼	&#128508;	
+            🗽	&#128509;	
+            🗾	&#128510;	
+            🗿	&#128511;	
+            😀	&#128512;	
+            😁	&#128513;	
+            😂	&#128514;	
+            😃	&#128515;	
+            😄	&#128516;	
+            😅	&#128517;
+        </p>
+        <hr>
+        
+
+          
+
+
+
+    
+        <script>
+            function hide() {
+              var x = document.getElementsByClassName("city");
+              for (var i = 0; i < x.length; i++) {
+                x[i].style.display = "node";
+              }
+            }
+            function displayResult() {
+            document.getElementById("myHeader").innerHTML = "Have a nice day!";
+            }
+            </script>
+  </body>
+</html>

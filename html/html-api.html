@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML APIs</title>
+    <style>
+        #div1, #div2 {
+        float: left;
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid black;
+        }
+    </style>
+    <script>
+        function clickCounter() {
+          if (typeof(Storage) !== "undefined") {
+            if (sessionStorage.clickcount) {
+              sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+            } else {
+              sessionStorage.clickcount = 1;
+            }
+            document.getElementById("result").innerHTML = "You have clicked the button " + sessionStorage.clickcount + " time(s) in this session.";
+          } else {
+            document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+          }
+        }
+        </script>
+</head>
+<body style="background-color: lightslategray ;">
+    <br>
+    <hr>
+    <button onclick="getLocation()">Get Geolocation</button>
+    <p id="demo"></p>
+    <hr>
+    <pre>
+        <p>
+            Note :
+            Property	Returns
+            coords.latitude	The latitude as a decimal number (always returned)
+            coords.longitude	The longitude as a decimal number (always returned)
+            coords.accuracy	The accuracy of position (always returned)
+            coords.altitude	The altitude in meters above the mean sea level (returned if available)
+            coords.altitudeAccuracy	The altitude accuracy of position (returned if available)
+            coords.heading	The heading as degrees clockwise from North (returned if available)
+            coords.speed	The speed in meters per second (returned if available)
+            timestamp	The date/time of the response (returned if available)
+        </p>
+    </pre>
+    
+        <h2>Drag and Drop</h2>
+        
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <img src="./public/image.jpg" draggable="true" ondragstart="drag(event)" id="drag1" width="100" height="100">
+        </div>
+        
+        <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <hr>
+
+        <div id="result"></div>
+        <p><button onclick="clickCounter()" type="button">Click me!</button></p>
+<div id="result"></div>
+<p>Click the button to see the counter increase.</p>
+
+<hr>
+<p>Count numbers: <output id="result"></output></p>
+<button onclick="startWorker()">Start Worker</button> 
+<button onclick="stopWorker()">Stop Worker</button>
+
+<hr>
+<h1>Getting server updates</h1>
+<div id="result1"></div>
+
+<script>
+if(typeof(EventSource) !== "undefined") {
+  var source = new EventSource("demo_sse.php");
+  source.onmessage = function(event) {
+    document.getElementById("result1").innerHTML += event.data + "<br>";
+  };
+} else {
+  document.getElementById("result1").innerHTML = "Sorry, your browser does not support server-sent events...";
+}
+</script>
+
+<script>
+var w;
+
+function startWorker() {
+  if(typeof(Worker) !== "undefined") {
+    if(typeof(w) == "undefined") {
+      w = new Worker("demo_workers.js");
+    }
+    w.onmessage = function(event) {
+      document.getElementById("result").innerHTML = event.data;
+    };
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Workers...";
+  }
+}
+
+function stopWorker() { 
+  w.terminate();
+  w = undefined;
+}
+</script>
+        
+<script>
+    function allowDrop(ev) {
+        ev.preventDefault();
+    }
+    
+    function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+    }
+    
+    function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+    }
+    </script>
+<script>
+    var x = document.getElementById("demo");
+    
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else { 
+            x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+    }
+    
+    function showPosition(position) {
+        x.innerHTML = "Latitude: " + position.coords.latitude + 
+        "<br>Longitude: " + position.coords.longitude;
+    }
+</script>
+
+<script>
+// Check browser support
+if (typeof(Storage) !== "undefined") {
+  // Store
+  localStorage.setItem("lastname", "Smith");
+  // Retrieve
+  document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+} else {
+  document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
+</script>
+
+</body>
+</html>
