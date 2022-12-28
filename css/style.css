@@ -1,0 +1,38 @@
+p {
+    color: blue;
+    text-align: center;
+  }
+
+#para1 {
+    text-align: center;
+    color: red;
+  }
+
+p.center {
+    text-align: center;
+    color: orange;
+  }
+p.large {
+    font-size: 300%;
+  }
+
+h1, h2, p {
+    text-align: center;
+    color: green;
+  }
+
+  div {
+    background: rgb(0, 128, 0);
+  }
+  
+  div.first {
+    background: rgba(0, 128, 0, 0.1);
+  }
+  
+  div.second {
+    background: rgba(0, 128, 0, 0.3);
+  }
+  
+  div.third {
+    background: rgba(0, 128, 0, 0.6);
+  }

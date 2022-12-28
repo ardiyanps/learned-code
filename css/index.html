@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Learn CSS</title>
+</head>
+<body>
+
+    <p>Syntax</p>
+    <p id="para1">Selector</p>
+    <p class="center">Class P</p> 
+    <p class="center large">Class large & center</p> 
+    <h1>Group Selector</h1>
+    <h2>Group Selector</h2>
+    <p>Group Selector</p>
+
+    <h1 style="background-color:DodgerBlue;">CSS Background Color</h1>
+    <h1 style="color:Tomato;">CSS Text Color</h1>
+    <h1 style="border:2px solid Tomato;">CSS Border Color</h1>
+
+    <p>Same as color name "Tomato":</p>
+    <h1 style="background-color:rgb(255, 99, 71);">rgb(255, 99, 71)</h1>
+    <h1 style="background-color:#ff6347;">#ff6347</h1>
+    <h1 style="background-color:hsl(9, 100%, 64%);">hsl(9, 100%, 64%)</h1>
+
+    <p>Same as color name "Tomato", but 50% transparent:</p>
+    <h1 style="background-color:rgba(255, 99, 71, 0.5);">rgba(255, 99, 71, 0.5)</h1>
+    <h1 style="background-color:hsla(9, 100%, 64%, 0.5);">hsla(9, 100%, 64%, 0.5)</h1>
+
+    <p>In addition to the predefined color names, colors can be specified using RGB, HEX, HSL, or even transparent colors using RGBA or HSLA color values.</p>
+
+    <h1>Make transparent colors with RGBA</h1>
+    <h2 style="background-color:rgba(255, 99, 71, 0);">rgba(255, 99, 71, 0)</h2>
+    <h2 style="background-color:rgba(255, 99, 71, 0.2);">rgba(255, 99, 71, 0.2)</h2>
+    <h2 style="background-color:rgba(255, 99, 71, 0.4);">rgba(255, 99, 71, 0.4)</h2>
+    <h2 style="background-color:rgba(255, 99, 71, 0.6);">rgba(255, 99, 71, 0.6)</h2>
+    <h2 style="background-color:rgba(255, 99, 71, 0.8);">rgba(255, 99, 71, 0.8)</h2>
+    <h2 style="background-color:rgba(255, 99, 71, 1);">rgba(255, 99, 71, 1)</h2>
+
+    <h1 style="color: #f0f;">CSS 3-digit Hex Code</h1>
+
+    <h1>Make transparent colors with HSLA</h1>
+    <h2 style="background-color:hsla(9, 100%, 64%, 0);">hsla(9, 100%, 64%, 0)</h2>
+    <h2 style="background-color:hsla(9, 100%, 64%, 0.2);">hsla(9, 100%, 64%, 0.2)</h2>
+    <h2 style="background-color:hsla(9, 100%, 64%, 0.4);">hsla(9, 100%, 64%, 0.4)</h2>
+    <h2 style="background-color:hsla(9, 100%, 64%, 0.6);">hsla(9, 100%, 64%, 0.6)</h2>
+    <h2 style="background-color:hsla(9, 100%, 64%, 0.8);">hsla(9, 100%, 64%, 0.8)</h2>
+    <h2 style="background-color:hsla(9, 100%, 64%, 1);">hsla(9, 100%, 64%, 1)</h2>
+
+    <h1>Transparent Boxes 2</h1>
+
+    <p>Result with opacity:</p>
+
+    <div style="opacity:0.1;">
+    <h1>10% opacity</h1>
+    </div>
+
+    <div style="opacity:0.3;">
+    <h1>30% opacity</h1>
+    </div>
+
+    <div style="opacity:0.6;">
+    <h1>60% opacity</h1>
+    </div>
+
+    <div>
+    <h1>opacity 1</h1>
+    </div>
+
+    <p>Result with rgba():</p>
+
+    <div class="first">
+    <h1>10% opacity</h1>
+    </div>
+
+    <div class="second">
+    <h1>30% opacity</h1>
+    </div>
+
+    <div class="third">
+    <h1>60% opacity</h1>
+    </div>
+
+    <div>
+    <h1>default</h1>
+    </div>
+
+    <p>Notice how the text gets transparent as well as the background color when using the opacity property.</p>
+    
+</body>
+</html>
